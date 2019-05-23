@@ -1,0 +1,17 @@
+---
+title: {{cookiecutter.experiment_name}}
+author: {{cookiecutter.author}}
+subtitle: {{cookiecutter.experiment_eln_id}}
+output:
+  pdf_document:
+    fig_caption: true
+---
+
+# Aim
+
+
+# Data
+
+
+# Results
+

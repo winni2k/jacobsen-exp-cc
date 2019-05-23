@@ -1,0 +1,19 @@
+rule all:
+    input:
+        'doc/doc.pdf',
+
+rule doc:
+    input: 'src/doc.rmd'
+    output: 'doc/doc.pdf'
+    shell:
+         """
+         Rscript -e "rmarkdown::render('{input}')"
+	 mv src/doc.pdf {output}
+         """
+
+rule archive:
+    output: 'analysis.tar.gz'
+    shell:
+         """
+         git ls-tree -r master --name-only | xargs tar -czf {output}
+         """

@@ -1,0 +1,10 @@
+{
+    "author": "Your name",
+    "experiment_name": "Name of experiment",
+    "experiment_eln_id": "ELN ID of this experiment",
+    "start_date": "{% now 'local' %}",
+    "experiment_slug": "{{ cookiecutter.start_date + '_' + cookiecutter.experiment_name.lower().replace(' ', '-') }}",
+    "conda_env_prefix": "Three-letter project name",
+    "conda_env_name": "{{ cookiecutter.conda_env_prefix + '.' + cookiecutter.start_date }}",
+    "_extensions": ["jinja2_time.TimeExtension"]
+}

@@ -1,0 +1,6 @@
+name: {{cookiecutter.conda_env_name}}
+dependencies:
+  - python=3.7
+  - snakemake
+  - pandas
+  - r-rmarkdown
